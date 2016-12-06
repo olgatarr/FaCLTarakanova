@@ -3,7 +3,6 @@
 f = open('freq.txt', 'r', encoding='utf-8')
 lines = f.readlines()
 
-print('Существительные женского рода единственного числа')
 nouns = []
 ipm = 0
 for line in lines:
@@ -12,6 +11,6 @@ for line in lines:
     if 'сущ' in line[1]:
         nouns.append(line[0])
         ipm += float(line[2])
-print(', '.join(nouns))
-print('IPM - ', ipm)
+print('Существительные женского рода единственного числа: ', ', '.join(nouns))
+print('Сумма IPM - ', ipm)
 f.close()
