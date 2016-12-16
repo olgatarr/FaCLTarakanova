@@ -5,13 +5,12 @@ def choice(name):
     choice = f.read()
     сhoice = choice.strip()
     choice = choice.split()
-    print(choice)
     f.close()
     return random.choice(choice)
 
 def punctuation():
     # эта функция возвращает случайный знак препинания из небольшого списка; у неё нет аргументов
-    marks = [".", "?", "!", "..."]
+    marks = [".", "!", "..."]
     return random.choice(marks)
 
 def make_text():
