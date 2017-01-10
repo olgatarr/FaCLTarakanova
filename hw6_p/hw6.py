@@ -14,9 +14,9 @@ def punctuation():
     return random.choice(marks)
 
 def make_text():
-    first = choice('names') + ' ' + choice('verb_part') + punctuation() + '\n'
-    second = 'hän ' + choice('verb_part') + ' ' +choice('noun_part') + punctuation() + '\n'
-    third = 'hän ' + choice('verb_gen') + ' ' + choice('noun_gen') + punctuation()
+    first = choice('names_3') + ' ' + choice('verb_part') + punctuation() + '\n'
+    second = choice('names_2') + ' ' + choice('verb_part') + ' ' +choice('noun_part') + punctuation() + '\n'
+    third = 'He ' + choice('verb_gen') + ' ' + choice('noun_gen') + punctuation()
     return first.capitalize() + second.capitalize() + third.capitalize()
 
 print(make_text())
