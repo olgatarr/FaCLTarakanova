@@ -14,9 +14,10 @@ def counting(words):
     count = 0
     count2 = 0
     for word in words:
-        if word[-1:-3:-1] == 'de':
+        checked = word.strip('.,":;?*()')
+        if checked.endswith('ed'):
             count += 1
-            if word[-3] == 'i':
+            if checked.endswith('ied'):
                 count2 += 1
     return str(count), str(count2)
 
