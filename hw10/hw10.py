@@ -11,10 +11,15 @@ def find(text):
     if res:
         res = res.group(1)
     return res
+
+def writing(name, checked):
+    f = open(name, 'a', encoding='utf-8')
+    f.write(checked + '\n')
+    f.close()
     
 def main():
     text = extract('tomat.htm')
     checked = find(text)
-    print (checked)
+    writing('res.txt', checked)
 
 main()
